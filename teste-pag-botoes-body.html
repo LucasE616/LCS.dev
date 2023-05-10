@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Tela trends - PE</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <link rel="shortcut icon" href="./assets/robot.svg">
+</head>
+
+<body>
+    
+    <div id="primary-page">
+        <div class="header">
+            <div class="number-graphics">
+                <p>Quantidade de gŕaficos:</p>
+                <input id="primary-btn" type="button" value="1"> <!-- Usar isso para usar botões -->
+                <input id="second-btn" type="button" value="2">
+                <input id="third-btn" type="button" value="3">
+                <input id="room-btn" type="button" value="4">
+          </div>
+          
+          <form class="requeriment-date">
+              <div class="initial-date">
+                  <p>Data ínicio:</p>
+                  <input type="date">
+                </div>
+                <div class="end-date">
+                    <p>Data fim:</p>
+                    <input type="date">
+                </div>
+          </form> 
+        </div>
+
+    </div>
+
+
+<!-- abaixo os gráficos  -->
+     <div id="" class="graphics-g4">
+        <div class="g1">
+          <!-- aqui embaixo está o modal  -->
+          <div id="app1">
+          <div class="central" @click="abrirModal()">
+              <img src="./assets/add-var.png">
+          </div>
+
+          <modal class="my-modal" v-if="mostrarModal" @fechar="fecharModal()">
+              <h2>Selecione os campos:</h2>
+              <div>
+                  <label>Planta:</label>
+                  <select v-model="plantaSelecionada">
+                      <option value="VW">VW</option>
+                      <option value="Ball">Ball</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Equipamento:</label>
+                  <select v-model="equipamentoSelecionado">
+                      <option value="Compressor">Compressor</option>
+                      <option value="Secador">Secador</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Tag:</label>
+                  <select v-model="tagSelecionada">
+                      <option value="PT-001">PT-001</option>
+                      <option value="PT-002">PT-002</option>
+                  </select>
+              </div>
+          </modal>
+          </div> 
+          <!-- aqui acima está o modal  -->
+
+        </div>
+        <div class="g2">
+          <!-- aqui embaixo está o modal  -->
+          <div id="app2">
+          <div class="central" @click="abrirModal()">
+              <img src="./assets/add-var.png">
+          </div>
+
+          <modal class="my-modal" v-if="mostrarModal" @fechar="fecharModal()">
+              <h2>Selecione os campos:</h2>
+              <div>
+                  <label>Planta:</label>
+                  <select v-model="plantaSelecionada">
+                      <option value="VW">VW</option>
+                      <option value="Ball">Ball</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Equipamento:</label>
+                  <select v-model="equipamentoSelecionado">
+                      <option value="Compressor">Compressor</option>
+                      <option value="Secador">Secador</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Tag:</label>
+                  <select v-model="tagSelecionada">
+                      <option value="PT-001">PT-001</option>
+                      <option value="PT-002">PT-002</option>
+                  </select>
+              </div>
+          </modal>
+          </div> 
+          <!-- aqui acima está o modal  -->
+
+        </div>
+        <div class="g3">
+          <!-- aqui embaixo está o modal  -->
+          <div id="app3">
+          <div class="central" @click="abrirModal()">
+              <img src="./assets/add-var.png">
+          </div>
+
+          <modal class="my-modal" v-if="mostrarModal" @fechar="fecharModal()">
+              <h2>Selecione os campos:</h2>
+              <div>
+                  <label>Planta:</label>
+                  <select v-model="plantaSelecionada">
+                      <option value="VW">VW</option>
+                      <option value="Ball">Ball</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Equipamento:</label>
+                  <select v-model="equipamentoSelecionado">
+                      <option value="Compressor">Compressor</option>
+                      <option value="Secador">Secador</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Tag:</label>
+                  <select v-model="tagSelecionada">
+                      <option value="PT-001">PT-001</option>
+                      <option value="PT-002">PT-002</option>
+                  </select>
+              </div>
+          </modal>
+          </div> 
+          <!-- aqui acima está o modal  -->
+
+        </div>
+        <div class="g4">
+          <!-- aqui embaixo está o modal  -->
+          <div id="app4">
+          <div class="central" @click="abrirModal()">
+              <img src="./assets/add-var.png">
+          </div>
+
+          <modal class="my-modal" v-if="mostrarModal" @fechar="fecharModal()">
+              <h2>Selecione os campos:</h2>
+              <div>
+                  <label>Planta:</label>
+                  <select v-model="plantaSelecionada">
+                      <option value="VW">VW</option>
+                      <option value="Ball">Ball</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Equipamento:</label>
+                  <select v-model="equipamentoSelecionado">
+                      <option value="Compressor">Compressor</option>
+                      <option value="Secador">Secador</option>
+                  </select>
+              </div>
+              <div>
+                  <label>Tag:</label>
+                  <select v-model="tagSelecionada">
+                      <option value="PT-001">PT-001</option>
+                      <option value="PT-002">PT-002</option>
+                  </select>
+              </div>
+          </modal>
+          </div> 
+          <!-- aqui acima está o modal  -->
+        </div>
+    </div> <!-- Usar somente esses gráficos -->
+ 
+<!-- Abaixo: mexer ou refazer parte da responsividade de gráficos  -->
+
+</body>
+</html>
+
+
+<!-- Aqui é o CSS -->
+<style>
+
+    #app {
+        margin: auto;
+    }
+
+    .central {
+    	border-radius: 5px;
+    	background: transparent;
+    	color: white;
+    	padding: 4px;
+    	cursor: pointer;
+        width: 54px;
+    }
+
+    .modal-mask {
+        position: fixed;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-wrapper {
+        width: 50%;
+        max-width: 500px;
+    }
+
+    .modal-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 10px rgba(231, 231, 231, 0.4);
+        border-radius: 16px;
+
+
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .modal-fechar {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    select {
+        margin-bottom: 10px;
+    }
+
+
+
+    /* Aqui abaixo, a parte que eu fiz  */
+body {
+    background: #262626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#primary-page {
+  margin: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-graphics {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.number-graphics p {
+    color: white;
+}
+
+/* Butões abaixo, talvez mudar ------------------------------------------------ */
+.number-graphics input {
+  border-radius: 5px 1px 5px 1px;
+  background: #003352;
+  color: white;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: none;
+}
+
+.number-graphics input:hover {
+  background: #00335293;
+  border: 1px solid #D9D9D9;
+}
+/* Butões acima, talvez mudar ------------------------------------------------- */
+
+.requeriment-date {
+  background: #343A41;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.end-date p, .initial-date p {
+  background: #343A41;
+  color: white;
+}
+
+.end-date input, .initial-date input {
+  background: #ffffff;
+  color: #262626;
+  border-radius: 5px;
+  border: 2px solid #4BA2DC;
+  cursor: pointer;
+}
+
+/* quatro graficos // Dar preferência à essas configurações */ 
+.graphics-g4 {
+  margin: 12px auto 0px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 24px 32px; 
+  grid-template-areas: 
+    "g1 g2"
+    "g3 g4"; 
+  width: 1200px; 
+  height: 500px; 
+}
+
+.g1 { grid-area: g1;}
+.g2 { grid-area: g2;}
+.g3 { grid-area: g3;}
+.g4 { grid-area: g4;}
+
+.g1, .g2, .g3, .g4 {
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+}
+/* Abaixo: adicionar mais configurações para a parte de gráficos  */
+</style>
+
+
+<!-- Aqui é o JS -->
+<script>
+    Vue.component('modal', {
+        template: `
+<div class="modal-mask">
+  <div class="modal-wrapper">
+    <div class="modal-container">
+      <div class="modal-header">
+        <slot name="header">
+          Selecione os campos:
+        </slot>
+        <button class="modal-fechar" @click="$emit('fechar')">
+          X
+        </button>
+      </div>
+      <div class="modal-body">
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`
+    });
+
+    new Vue({
+        el: '#app1',
+        data: {
+            mostrarModal: false,
+            plantaSelecionada: '',
+            equipamentoSelecionado: '',
+            tagSelecionada: '',
+        },
+        methods: {
+            abrirModal() {
+                this.mostrarModal = true;
+            },
+            fecharModal() {
+                this.mostrarModal = false;
+            }
+        }
+    });
+
+    new Vue({
+        el: '#app2',
+        data: {
+            mostrarModal: false,
+            plantaSelecionada: '',
+            equipamentoSelecionado: '',
+            tagSelecionada: '',
+        },
+        methods: {
+            abrirModal() {
+                this.mostrarModal = true;
+            },
+            fecharModal() {
+                this.mostrarModal = false;
+            }
+        }
+    });
+
+    new Vue({
+        el: '#app3',
+        data: {
+            mostrarModal: false,
+            plantaSelecionada: '',
+            equipamentoSelecionado: '',
+            tagSelecionada: '',
+        },
+        methods: {
+            abrirModal() {
+                this.mostrarModal = true;
+            },
+            fecharModal() {
+                this.mostrarModal = false;
+            }
+        }
+    });
+
+    new Vue({
+        el: '#app4',
+        data: {
+            mostrarModal: false,
+            plantaSelecionada: '',
+            equipamentoSelecionado: '',
+            tagSelecionada: '',
+        },
+        methods: {
+            abrirModal() {
+                this.mostrarModal = true;
+            },
+            fecharModal() {
+                this.mostrarModal = false;
+            }
+        }
+    });
+
+
+// Abaixo: Parte para editar quantidade de gráficos // eu criei
+
+const buttonOne = document.querySelector('#primary-btn')
+    if (buttonOne) {
+        buttonOne.addEventListener('click', event => {
+            event.preventDefault()
+            console.log('Oi, cliquei no primeiro botão')
+        })
+    };
+
+const buttonTwo = document.querySelector('#second-btn')
+    if (buttonTwo) {
+        buttonTwo.addEventListener('click', event => {
+            event.preventDefault()
+            console.log('Oi, cliquei no segundo botão')
+        })
+    };
+
+const buttonThree = document.querySelector('#third-btn')
+    if (buttonThree) {
+        buttonThree.addEventListener('click', event => {
+            event.preventDefault()
+            console.log('Oi, cliquei no terceiro botão')
+        })
+    };
+
+const buttonFour = document.querySelector('#room-btn')
+    if (buttonFour) {
+        buttonFour.addEventListener('click', event => {
+            event.preventDefault()
+            console.log('Oi, cliquei no quarto botão')
+        })
+    };
+
+// Usar isso acima pra dá responsividade aos botões
+
+</script>
